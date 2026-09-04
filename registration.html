@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page {
+            background-image: url('./img/ian-keefe-OgcJIKRnRC8-unsplash.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: auto;
+        }
+        .web{
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30rem;
+            height: 40rem;
+            margin: 7rem auto;
+            padding: 2rem;
+            color: rgba(7, 54, 60);
+            background-color: rgba(237, 237, 237, 0.733);
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(7, 54, 60);
+        }
+        @media (min-width: 355px) and (max-width: 575px){
+            .form-container {
+                width: 75%;
+                height: 40rem;
+                margin: 6rem auto;
+                padding: 1.9rem;
+            }
+        }
+    </style>
+    <link rel="icon" href="./img/frame.png" type="image/x-icon">
+</head>
+<body>
+    <div class="web">
+        <header>
+            <a href="./index.html">
+                <h1>House Place</h1>
+            </a>
+        </header>
+    
+        <div class="page">
+            <div class="form-container">
+                <h2>Registration Form</h2>
+                <form action="login.html" method="GET">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="i.e. Mr. Mahmood" required>
+        
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        <option value="Prefer not to Say">Prefer not to Say</option>
+                    </select>
+        
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+        
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="abc123@gmail.com" required>
+        
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="i.e. 03**-1234567" required>
+        
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="67ED&^yh" required>
+                    <br>
+                    <button type="submit">Submit</button>
+                    <br>
+                    <a href="./login.html" style="display: flex; justify-content: right;"> Already have account!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

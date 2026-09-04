@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h2 {
+            font-size: 2rem;
+        }
+        .page {
+            background-image: url('./img/ian-keefe-OgcJIKRnRC8-unsplash.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 37.05rem;
+        }
+        .web{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <link rel="icon" href="./img/frame.png" type="image/x-icon">
+</head>
+<body>
+    <div class="web">
+        <header>
+            <a href="./index.html">
+                <h1>House Place</h1>
+            </a>
+        </header>
+    
+        <div class="page">
+            <div class="form-container">
+                <h2>Login Form</h2>
+                <form action="#">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="i.e. Mr.Mahmood" required>
+        
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="67ED&^yh" required>
+                    <br>
+                    <button type="submit">Login</button>
+                    <br>
+                    <a href="./registration.html" style="display: flex; justify-content: right;"> Registration </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

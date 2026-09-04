@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(7, 54, 60);;
+}
+
+a:hover {
+    filter: drop-shadow(-12px 7px 8px rgb(4, 157, 177));
+}
+
+h1 {
+    color: rgba(7, 54, 60);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(237, 237, 237);
+    width: 100%;
+    height: 6rem;
+    color: rgba(7, 54, 60);
+    font-family: Brush Script MT;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    background-color: rgba(237, 237, 237);
+}
+
+.buttons button {
+    margin: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 550;
+    background-color: rgb(18, 91, 100);
+    color: rgba(237, 237, 237);
+    border-radius: 20px;
+    cursor: pointer;
+    width: 7.9rem;
+    height: 2.8rem;
+}
+
+.buttons button:hover {
+    background-color: rgb(4, 157, 177);
+}
+
+#pagearea {
+    display: flex;
+    flex-direction: row;
+}
+
+#pagearea nav {
+    background-color: rgba(7, 54, 60);
+    width: 14rem;
+    height: 32.4rem;
+    margin: 0;
+    padding: 0;
+}
+
+#pagearea nav ul {
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+    flex-direction: column;
+}
+
+#pagearea nav ul li {
+    margin: 20px 0;
+}
+
+#pagearea nav ul li a {
+    text-decoration: none;
+    margin: 13px;
+    color: rgba(237, 237, 237, 0.733);
+    font-weight: 800;
+}
+
+#adds {
+    margin: 0;
+    background-image: url('./img/ian-keefe-OgcJIKRnRC8-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 86rem;
+    height: 32.4rem;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 20rem;
+    margin: 7rem auto;
+    padding: 2rem;
+    color: rgba(7, 54, 60);
+    background-color: rgba(237, 237, 237, 0.733);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(7, 54, 60);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.form-container input{
+    padding: 10px;
+    width: 20rem;
+    height: 1.75rem;
+    margin-bottom: 10px;
+    border: 1px solid rgba(237, 237, 237, 0.733);
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.form-container select {
+    padding: 10px;
+    width: 21.5rem;
+    height: 2.5rem;
+    margin-bottom: 10px;
+    border: 1px solid rgba(237, 237, 237, 0.733);
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.form-container button {
+    padding: 10px;
+    background-color:rgba(7, 54, 60);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.form-container button:hover {
+    background-color: rgba(4, 157, 177);
+}
+
+/* Media Query for Other Devices */
+@media (min-width: 355px) and (max-width: 575px) {
+    .buttons {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #pagearea {
+        flex-direction: column;
+    }
+    #pagearea nav {
+        width: 100%;
+        height: 18rem;
+    }
+    #pagearea nav ul {
+        justify-content: center;
+        align-items: center;
+        margin: 18px 7rem;
+        padding: 0px 20px;
+    }
+    #adds {
+        width: 100%;
+        height: 32.4rem;
+        color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-container {
+        width: 75%;
+        height: 21rem;
+        margin: 6rem auto;
+        padding: 1.9rem;
+    }
+    .form-container label {
+        margin-bottom: 10px;
+        font-size: 15px;
+        margin-left: 29px;
+    }
+    .form-container input{
+        padding: 4px 0 4px 14px;
+        width: 100%;
+        height: 1.75rem;
+        font-size: 15px;
+    }
+    .form-container select {
+        padding: 4px 0 4px 14px;
+        width: 100%;
+        height: 1.75rem;
+        font-size: 15px;
+    }
+}

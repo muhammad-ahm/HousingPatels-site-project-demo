@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Place</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h2 {
+            font-size: 3.5rem;
+        }
+        p {
+            font-weight: 550;
+            font-size: x-large;
+        }
+        @media (min-width: 355px) and (max-width: 575px){
+            h2 {
+                font-size: 2rem;
+                margin: 2.5rem;
+            }
+            p {
+                font-weight: 200;
+                font-size: 16px;
+                margin: 2.5rem;
+            }
+        }
+
+    </style>
+    <link rel="icon" href="./img/frame.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div id="main">
+        <div class="content">
+            <header>
+                <a href="./index.html">
+                    <h1>House Place</h1>
+                </a>
+            </header>
+            
+            <div class="buttons">
+                <button onclick="window.location.href='login.html'">Login</button>
+                <button onclick="window.location.href='registration.html'">Register</button>
+            </div>
+        </div>
+        <div id="pagearea">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="registration.html">Register</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="adds">
+                <h2>Welcome To House Place</h2>
+                <p>A place where every room reflects your unique taste and every moment feels like home.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
