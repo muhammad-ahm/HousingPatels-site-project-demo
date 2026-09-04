@@ -1,1 +1,24 @@
-# Personal Portfolio Website (v2 — with Backend)  This project started as one of my first assignments at university, built during my first semester for the "Introduction to Computer" course. The course covered the fundamentals of web development — HTML for structure, CSS for styling, and JavaScript for interactivity — and one of the final deliverables was a personal portfolio website. It was my first real hands-on experience putting these concepts together, and I learned a lot from it.  ## The Upgrade  After completing my first internship at **Sysartx**, I revisited this project with a fresh perspective. I rebuilt the backend using **PHP and JavaScript**, turning what was originally a static site into something more dynamic and functional. This stage of the journey was genuinely exciting — and at times pretty stressful — as I worked through real backend logic for the first time outside of a classroom setting.  ## Adding a Database  Later, after completing my **DBMS (Database Management Systems)** course, I took the project a step further by connecting it to **PostgreSQL**, giving it proper data persistence and a more complete full-stack structure.  ## Tech Stack  - **Frontend:** HTML, CSS, JavaScript - **Backend:** PHP, JavaScript - **Database:** PostgreSQL  ## What I Learned  - Core web fundamentals: HTML, CSS, and JS from scratch - Practical backend development with PHP after applying internship experience - Connecting a web application to a relational database (PostgreSQL) - Iteratively improving a project over time as my skills grew
+# Personal Portfolio Website (v2 — with Backend)
+
+This project started as one of my first assignments at university, built during my first semester for the "Introduction to Computer" course. The course covered the fundamentals of web development — HTML for structure, CSS for styling, and JavaScript for interactivity — and one of the final deliverables was a personal portfolio website. It was my first real hands-on experience putting these concepts together, and I learned a lot from it.
+
+## The Upgrade
+
+After completing my first internship at **Sysartx**, I revisited this project with a fresh perspective. I rebuilt the backend using **PHP and JavaScript**, turning what was originally a static site into something more dynamic and functional. This stage of the journey was genuinely exciting — and at times pretty stressful — as I worked through real backend logic for the first time outside of a classroom setting.
+
+## Adding a Database
+
+Later, after completing my **DBMS (Database Management Systems)** course, I took the project a step further by connecting it to **PostgreSQL**, giving it proper data persistence and a more complete full-stack structure.
+
+## Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** PHP, JavaScript
+- **Database:** PostgreSQL
+
+## What I Learned
+
+- Core web fundamentals: HTML, CSS, and JS from scratch
+- Practical backend development with PHP after applying internship experience
+- Connecting a web application to a relational database (PostgreSQL)
+- Iteratively improving a project over time as my skills grew
