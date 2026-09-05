@@ -9,6 +9,7 @@ Tested end-to-end in a local environment: registration, duplicate-email rejectio
 correct/incorrect login, 5-attempt rate limiting, CSRF rejection, and logout all verified working.
 
 **Live demo:** https://housingpatels-site-project-demo.muhammad-ahmee-mh.workers.dev/
+
 **Repo:** https://github.com/muhammad-ahm/HousingPatels-site-project-demo
 
 ## Requirements (on your hosting)
