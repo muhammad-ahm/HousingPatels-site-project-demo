@@ -1,4 +1,4 @@
-# Housing Patel — Real Authentication Backend
+# Housing Patel
 
 This is a real, tested PHP + PostgreSQL authentication system: registration, login,
 protected dashboard, and logout — with bcrypt password hashing, prepared statements
