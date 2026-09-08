@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Patel | Browse Properties</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="icon" href="./img/frame.png" type="image/x-icon">
+</head>
+<body>
+    <div class="web">
+        <header>
+            <a href="./index.html"><h1>Housing Patel</h1></a>
+            <nav class="top-nav">
+                <a href="./properties.html">Browse</a>
+                <a href="./add-property.html">List a Property</a>
+                <a href="./dashboard.html">Dashboard</a>
+            </nav>
+        </header>
+
+        <div class="page-section">
+            <h2>Browse Properties</h2>
+
+            <form id="filterForm" class="filter-bar">
+                <input type="text" id="fCity" placeholder="City">
+                <select id="fType">
+                    <option value="">Any type</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="plot">Plot</option>
+                    <option value="commercial">Commercial</option>
+                </select>
+                <input type="number" id="fMinPrice" placeholder="Min price">
+                <input type="number" id="fMaxPrice" placeholder="Max price">
+                <input type="number" id="fBedrooms" placeholder="Min bedrooms">
+                <select id="fSort">
+                    <option value="newest">Newest first</option>
+                    <option value="price_low">Price: low to high</option>
+                    <option value="price_high">Price: high to low</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+
+            <div id="resultsInfo" class="results-info"></div>
+            <div id="propertyGrid" class="property-grid"></div>
+            <div id="pagination" class="pagination"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

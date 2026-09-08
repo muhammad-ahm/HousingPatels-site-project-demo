@@ -1,0 +1,13 @@
+name = "housing-patel"
+compatibility_date = "2024-09-01"
+pages_build_output_dir = "."
+
+# KV namespace used for login rate-limiting (functions/_lib/rateLimit.js).
+# For LOCAL DEV: `wrangler pages dev` will emulate this automatically,
+# no real Cloudflare KV namespace needed on your machine.
+# For PRODUCTION: create a real KV namespace and bind it with the same
+# variable name (RATE_LIMIT_KV) in the Cloudflare Pages dashboard under
+# Settings → Functions → KV namespace bindings. See README.md.
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "local-placeholder-id"

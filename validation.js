@@ -1,9 +1,9 @@
 // ===================================================
 // Housing Patel — Client-side form validation
-// This is a UX layer only. The PHP backend re-validates
-// everything server-side and is the real source of truth —
-// this script never replaces that, it just gives the user
-// faster feedback before they hit submit.
+// This is a UX layer only. The Pages Functions backend re-validates
+// everything server-side (functions/_lib/validate.js) and is the real
+// source of truth — this script never replaces that, it just gives
+// the user faster feedback before they hit submit.
 // ===================================================
 
 function showFieldError(input, message) {
@@ -35,7 +35,6 @@ function isValidEmailFormat(value) {
 
 // ---------------------------------------------------
 // Password strength check
-// Returns { score: 0-4, label: string }
 // ---------------------------------------------------
 function checkPasswordStrength(password) {
     let score = 0;
@@ -65,18 +64,21 @@ function renderPasswordStrength(password, meterEl, labelEl) {
 
 // ===================================================
 // Registration form wiring
+// Exposes window.validateRegisterForm() / validateLoginForm() so
+// auth.js can call these BEFORE doing its fetch() — having two
+// separate submit listeners on the same form would race against
+// each other depending on script load order, so this keeps a
+// single, predictable point of control in auth.js.
 // ===================================================
 document.addEventListener("DOMContentLoaded", function () {
-    const regForm = document.querySelector('form[action*="process-register"]');
+    const regForm = document.getElementById("registerForm");
     if (regForm) {
-        const nameInput = regForm.querySelector('[name="name"]');
-        const emailInput = regForm.querySelector('[name="email"]');
-        const phoneInput = regForm.querySelector('[name="phone"]');
-        const passwordInput = regForm.querySelector('[name="password"]');
-        const confirmInput = regForm.querySelector('[name="password_confirm"]');
-        const submitBtn = regForm.querySelector('button[type="submit"]');
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const phoneInput = document.getElementById("phone");
+        const passwordInput = document.getElementById("password");
+        const confirmInput = document.getElementById("password_confirm");
 
-        // Password strength meter UI, inserted right after the password field
         const strengthWrap = document.createElement("div");
         strengthWrap.className = "password-strength-wrap";
         strengthWrap.innerHTML =
@@ -142,20 +144,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         confirmInput.addEventListener("input", validateConfirm);
 
-        regForm.addEventListener("submit", function (e) {
+        // Called by auth.js before it submits. Runs every check so the
+        // user sees all problems at once, not just the first one.
+        window.validateRegisterForm = function () {
             const checks = [validateName(), validateEmail(), validatePhone(), validatePassword(), validateConfirm()];
-            if (checks.includes(false)) {
-                e.preventDefault();
-            }
-        });
+            return !checks.includes(false);
+        };
     }
 
     // ===================================================
-    // Login form wiring (lighter touch — server does the real check)
+    // Login form (lighter touch — server does the real check)
     // ===================================================
-    const loginForm = document.querySelector('form[action*="process-login"]');
+    const loginForm = document.getElementById("loginForm");
     if (loginForm) {
-        const emailInput = loginForm.querySelector('[name="email"]');
+        const emailInput = document.getElementById("email");
         emailInput.addEventListener("blur", function () {
             if (emailInput.value.trim() === "") return;
             if (!isValidEmailFormat(emailInput.value.trim())) {
@@ -164,5 +166,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 markFieldValid(emailInput);
             }
         });
+
+        window.validateLoginForm = function () {
+            const value = emailInput.value.trim();
+            if (!isValidEmailFormat(value)) {
+                showFieldError(emailInput, "Enter a valid email address.");
+                return false;
+            }
+            return true;
+        };
     }
 });

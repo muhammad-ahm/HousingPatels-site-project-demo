@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Patel | Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="app.css">
+    <style>
+        #dashboardRoot {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        #dashboardRoot h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            text-align: center;
+        }
+        #logoutBtn {
+            padding: 10px 24px;
+            background-color: rgba(7, 54, 60, 1);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 20px;
+            margin-top: 1rem;
+        }
+        #logoutBtn:hover {
+            background-color: rgba(4, 157, 177, 1);
+        }
+        .dashboard-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        .dashboard-links a {
+            padding: 10px 20px;
+            background: #ededed;
+            border-radius: 10px;
+            text-decoration: none;
+            color: rgba(7, 54, 60, 1);
+            font-weight: 600;
+        }
+        .dashboard-links a:hover {
+            background: #dadada;
+        }
+        #adminLink {
+            display: none; /* shown by app.js only if the logged-in user is an admin */
+        }
+    </style>
+    <link rel="icon" href="./img/frame.png" type="image/x-icon">
+</head>
+<body>
+    <div class="web">
+        <header>
+            <a href="./index.html"><h1>Housing Patel</h1></a>
+            <nav class="top-nav">
+                <a href="./properties.html">Browse</a>
+                <a href="./add-property.html">List a Property</a>
+            </nav>
+        </header>
+
+        <!-- Hidden until auth.js confirms a valid session via /auth/me -->
+        <div id="dashboardRoot">
+            <h2>Welcome back, <span id="userName">there</span> 👋</h2>
+
+            <div class="dashboard-links">
+                <a href="./my-listings.html">My Listings</a>
+                <a href="./my-favorites.html">Favorites</a>
+                <a href="./my-inquiries.html">Inquiries</a>
+                <a href="./admin.html" id="adminLink">Admin Panel</a>
+            </div>
+
+            <button id="logoutBtn" type="button">Log Out</button>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
